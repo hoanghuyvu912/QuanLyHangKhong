@@ -4,6 +4,7 @@ import com.nonit.QuanLyHangKhongJPA.entity.MayBay;
 import com.nonit.QuanLyHangKhongJPA.entity.MayBay;
 import com.nonit.QuanLyHangKhongJPA.service.dto.CustomMayBayDTO;
 import com.nonit.QuanLyHangKhongJPA.service.dto.CustomMayBayInterfaceDTO;
+import com.nonit.QuanLyHangKhongJPA.service.dto.MayBayRestDTO;
 import org.springframework.data.repository.query.Param;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,37 +16,37 @@ import java.util.List;
 @RequestMapping(value = "/api/maybay")
 public interface MayBayAPI {
     @GetMapping
-    ResponseEntity<List<MayBay>> getAllMayBay();
+    ResponseEntity<List<MayBayRestDTO>> getAllMayBay();
 
     @GetMapping(value = "/getByLoai")
-    ResponseEntity<MayBay> getByLoai(@RequestParam("loai") String loai);
+    ResponseEntity<MayBayRestDTO> getByLoai(@RequestParam("loai") String loai);
 
     @GetMapping(value = "/getByLoaiContain")
-    ResponseEntity<List<MayBay>> getByLoaiContain(@RequestParam("s") String s);
+    ResponseEntity<List<MayBayRestDTO>> getByLoaiContain(@RequestParam("s") String s);
 
     @GetMapping(value = "/getByTamBayGreaterThan")
-    ResponseEntity<List<MayBay>> getByTamBayGreaterThan(@RequestParam Integer i);
+    ResponseEntity<List<MayBayRestDTO>> getByTamBayGreaterThan(@RequestParam("tamBay") String tamBay);
 
     @GetMapping(value = "/getByTamBayBetween")
-    ResponseEntity<List<MayBay>> getByTamBayBetween(@Param("i1") Integer i1, @Param("i2") Integer i2);
+    ResponseEntity<List<MayBayRestDTO>> getByTamBayBetween(@Param("tamBay1") String tamBay1, @Param("tamBay2") String tamBay2);
 
     @GetMapping(value = "/getByTamBayLessThan")
-    ResponseEntity<List<MayBay>> getByTamBayLessThan(@RequestParam("i") Integer i);
+    ResponseEntity<List<MayBayRestDTO>> getByTamBayLessThan(@RequestParam("tamBay") String tamBay);
 
     @GetMapping(value = "/getByTamBayIs")
-    ResponseEntity<List<MayBay>> getByTamBayIs(@RequestParam("i") Integer i);
+    ResponseEntity<List<MayBayRestDTO>> getByTamBayIs(@RequestParam("tamBay") String tamBay);
 
     @GetMapping(value = "/getByLoaiStartWith")
-    ResponseEntity<List<MayBay>> getByLoaiStartWith(@RequestParam("s") String s);
+    ResponseEntity<List<MayBayRestDTO>> getByLoaiStartWith(@RequestParam("s") String s);
 
     @GetMapping(value = "/getByLoaiEndWith")
-    ResponseEntity<List<MayBay>> getByLoaiEndWith(@RequestParam("s") String s);
+    ResponseEntity<List<MayBayRestDTO>> getByLoaiEndWith(@RequestParam("s") String s);
 
     @GetMapping(value = "/getByLoaiNotLike")
-    ResponseEntity<List<MayBay>> getByLoaiNotLike(@RequestParam("s") String s);
+    ResponseEntity<List<MayBayRestDTO>> getByLoaiNotLike(@RequestParam("s") String s);
 
     @GetMapping(value = "/getByMaNV")
-    ResponseEntity<List<MayBay>> getByMaNV(@RequestParam("maNV") String maNV);
+    ResponseEntity<List<MayBayRestDTO>> getByMaNV(@RequestParam("maNV") String maNV);
 
     @GetMapping(value = "/getMaMBAndTamBayByLoai")
     ResponseEntity<List<CustomMayBayInterfaceDTO>> getMaMBAndTamBayByLoaiLike(@RequestParam("loai") String loai);

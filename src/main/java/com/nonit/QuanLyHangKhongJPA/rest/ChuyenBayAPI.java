@@ -1,6 +1,7 @@
 package com.nonit.QuanLyHangKhongJPA.rest;
 
 import com.nonit.QuanLyHangKhongJPA.entity.ChuyenBay;
+import com.nonit.QuanLyHangKhongJPA.service.dto.ChuyenBayRestDTO;
 import org.springframework.cglib.core.Local;
 import org.springframework.data.repository.query.Param;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -15,53 +16,53 @@ import java.util.List;
 @RequestMapping(value = "/api/chuyenbay")
 public interface ChuyenBayAPI {
     @GetMapping
-    ResponseEntity<List<ChuyenBay>> getAllChuyenBay();
+    ResponseEntity<List<ChuyenBayRestDTO>> getAllChuyenBay();
 
     @GetMapping(value = "/getByGaDi")
-    ResponseEntity<List<ChuyenBay>> getByGaDi(@Param("gaDi") String gaDi);
+    ResponseEntity<List<ChuyenBayRestDTO>> getByGaDi(@RequestParam("gaDi") String gaDi);
 
     @GetMapping(value = "/getByGaDiContain")
-    ResponseEntity<List<ChuyenBay>> getByGaDiContain(@Param("s") String s);
+    ResponseEntity<List<ChuyenBayRestDTO>> getByGaDiContain(@RequestParam("s") String s);
 
     @GetMapping(value = "/getByDoDaiGreaterThan")
-    ResponseEntity<List<ChuyenBay>> getByDoDaiGreaterThan(@Param("i") Integer i);
+    ResponseEntity<List<ChuyenBayRestDTO>> getByDoDaiGreaterThan(@RequestParam("doDai") String doDai);
 
     @GetMapping(value = "/getByGaDiAndGaDen")
-    ResponseEntity<List<ChuyenBay>> getByGaDiAndGaDen(@Param("gaDi") String gaDi, @Param("gaDen") String gaDen);
+    ResponseEntity<List<ChuyenBayRestDTO>> getByGaDiAndGaDen(@Param("gaDi") String gaDi, @Param("gaDen") String gaDen);
 
     @GetMapping(value = "/getByLoaiMayBay")
-    ResponseEntity<List<ChuyenBay>> getByLoaiMayBay(@Param("loai") String loai);
+    ResponseEntity<List<ChuyenBayRestDTO>> getByLoaiMayBay(@Param("loai") String loai);
 
     @GetMapping(value = "/getByBoeing")
-    ResponseEntity<List<ChuyenBay>> getByBoeing();
+    ResponseEntity<List<ChuyenBayRestDTO>> getByBoeing();
 
     @GetMapping(value = "/getByAirbusA320")
-    ResponseEntity<List<ChuyenBay>> getByAirbusA320();
+    ResponseEntity<List<ChuyenBayRestDTO>> getByAirbusA320();
 
     @GetMapping(value = "/getByDoDaiLessThan10000AndGreaterThan8000")
-    ResponseEntity<List<ChuyenBay>> getByDoDaiLessThan10000AndGreaterThan8000();
+    ResponseEntity<List<ChuyenBayRestDTO>> getByDoDaiLessThan10000AndGreaterThan8000();
 
     @GetMapping(value = "/getByDoDaiLessThan")
-    ResponseEntity<List<ChuyenBay>> getByDoDaiLessThan(@Param("doDai") Integer doDai);
+    ResponseEntity<List<ChuyenBayRestDTO>> getByDoDaiLessThan(@Param("doDai") String doDai);
 
     @GetMapping(value = "/getByDoDaiIs")
-    ResponseEntity<List<ChuyenBay>> getByDoDaiIs(@Param("doDai") Integer doDai);
+    ResponseEntity<List<ChuyenBayRestDTO>> getByDoDaiIs(@Param("doDai") String doDai);
 
     @GetMapping(value = "/getByDoDaiBetween")
-    ResponseEntity<List<ChuyenBay>> getByDoDaiBetween(@Param("doDai1") Integer doDai1, @Param("doDai2") Integer doDai2);
+    ResponseEntity<List<ChuyenBayRestDTO>> getByDoDaiBetween(@Param("doDai1") String doDai1, @Param("doDai2") String doDai2);
 
     @GetMapping(value = "/getByLoaiGaDiSGNAndGaDenBMV")
-    ResponseEntity<List<ChuyenBay>> getByLoaiGaDiSGNAndGaDenBMV();
+    ResponseEntity<List<ChuyenBayRestDTO>> getByLoaiGaDiSGNAndGaDenBMV();
 
     @GetMapping(value = "/getByGioDiSoonerThanASpecificTime")
-    ResponseEntity<List<ChuyenBay>> getByGioDiBeforeASpecificTime(@RequestParam("time") LocalTime time);
+    ResponseEntity<List<ChuyenBayRestDTO>> getByGioDiBeforeASpecificTime(@RequestParam("time") LocalTime time);
 
     @GetMapping(value = "/getCountChuyenBayByGadi")
     ResponseEntity<Integer> getCountChuyenBayByGadi(@Param("gaDi") String gaDi);
 
     @GetMapping(value = "/getByGioDiBefore12")
-    ResponseEntity<List<ChuyenBay>> getByGioDiBefore12();
+    ResponseEntity<List<ChuyenBayRestDTO>> getByGioDiBefore12();
 
     @GetMapping(value = "/timChuyenBayXuatPhatTu")
-    ResponseEntity<List<ChuyenBay>> timChuyenBayXuatPhatTu(@RequestParam("gaDi") String gaDi);
+    ResponseEntity<List<ChuyenBayRestDTO>> timChuyenBayXuatPhatTu(@RequestParam("gaDi") String gaDi);
 }
