@@ -1,0 +1,1082 @@
+{
+	"info": {
+		"_postman_id": "741cdd89-e272-437d-9209-eda4fea3cad3",
+		"name": "QuanLyHangKhong",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27087694"
+	},
+	"item": [
+		{
+			"name": "NhanVienAPI",
+			"item": [
+				{
+					"name": "GetAllNhanVien",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/nhanvien",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"nhanvien"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByTen",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/nhanvien/getByTen?ten=Ton Van Quy",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"nhanvien",
+								"getByTen"
+							],
+							"query": [
+								{
+									"key": "ten",
+									"value": "Ton Van Quy"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByTenContain",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/nhanvien/getByTenContain?s=Q",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"nhanvien",
+								"getByTenContain"
+							],
+							"query": [
+								{
+									"key": "s",
+									"value": "Q"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByLuongGreaterThan",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/nhanvien/getByLuongGreaterThan?luong=250000",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"nhanvien",
+								"getByLuongGreaterThan"
+							],
+							"query": [
+								{
+									"key": "luong",
+									"value": "250000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByTenStartWith",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/nhanvien/getByTenStartWith?s=N",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"nhanvien",
+								"getByTenStartWith"
+							],
+							"query": [
+								{
+									"key": "s",
+									"value": "N"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByTenEndWith",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/nhanvien/getByTenEndWith?s=n",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"nhanvien",
+								"getByTenEndWith"
+							],
+							"query": [
+								{
+									"key": "s",
+									"value": "n"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByTenNotLike",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/nhanvien/getByTenNotLike?s=Son",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"nhanvien",
+								"getByTenNotLike"
+							],
+							"query": [
+								{
+									"key": "s",
+									"value": "Son"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByMaMB",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/nhanvien/getByMaMB?maMB=154",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"nhanvien",
+								"getByMaMB"
+							],
+							"query": [
+								{
+									"key": "maMB",
+									"value": "154"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByLuongBetween",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/nhanvien/getByLuongBetween?luong1=120000&luong2=200000",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"nhanvien",
+								"getByLuongBetween"
+							],
+							"query": [
+								{
+									"key": "luong1",
+									"value": "120000"
+								},
+								{
+									"key": "luong2",
+									"value": "200000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByLuongLessThan",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/nhanvien/getByLuongLessThan?luong=50000",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"nhanvien",
+								"getByLuongLessThan"
+							],
+							"query": [
+								{
+									"key": "luong",
+									"value": "50000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByLuongIs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/nhanvien/getByLuongIs?luong=48250",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"nhanvien",
+								"getByLuongIs"
+							],
+							"query": [
+								{
+									"key": "luong",
+									"value": "48250"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByNumberOfPlanesGreaterThan",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/nhanvien/getByNumberOfPlanesGreaterThan?number=3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"nhanvien",
+								"getByNumberOfPlanesGreaterThan"
+							],
+							"query": [
+								{
+									"key": "number",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ChungNhanAPI",
+			"item": [
+				{
+					"name": "GetAllChungNhan",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/chungnhan",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"chungnhan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateChungNhan",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"maNV\": \"011564812\",\r\n    \"maMB\": 340\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/chungnhan",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"chungnhan"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MayBayAPI",
+			"item": [
+				{
+					"name": "GetAllMayBay",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/maybay",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"maybay"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByLoai",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/maybay/getByLoai?loai=Airbus A319",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"maybay",
+								"getByLoai"
+							],
+							"query": [
+								{
+									"key": "loai",
+									"value": "Airbus A319"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByLoaiContain",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/maybay/getByLoaiContain?s=Boeing",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"maybay",
+								"getByLoaiContain"
+							],
+							"query": [
+								{
+									"key": "s",
+									"value": "Boeing"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByTamBayGreaterThan",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/maybay/getByTamBayGreaterThan?tamBay=10000",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"maybay",
+								"getByTamBayGreaterThan"
+							],
+							"query": [
+								{
+									"key": "tamBay",
+									"value": "10000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByTamBayLessThan",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/maybay/getByTamBayLessThan?tamBay=6000",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"maybay",
+								"getByTamBayLessThan"
+							],
+							"query": [
+								{
+									"key": "tamBay",
+									"value": "6000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByTamBayBetween",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/maybay/getByTamBayBetween?tamBay1=5000&tamBay2=15000",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"maybay",
+								"getByTamBayBetween"
+							],
+							"query": [
+								{
+									"key": "tamBay1",
+									"value": "5000"
+								},
+								{
+									"key": "tamBay2",
+									"value": "15000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByTamBayIs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/maybay/getByTamBayIs?tamBay=11392",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"maybay",
+								"getByTamBayIs"
+							],
+							"query": [
+								{
+									"key": "tamBay",
+									"value": "11392"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByLoaiStartWith",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/maybay/getByLoaiStartWith?s=Airbus",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"maybay",
+								"getByLoaiStartWith"
+							],
+							"query": [
+								{
+									"key": "s",
+									"value": "Airbus"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByLoaiEndWith",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/maybay/getByLoaiEndWith?s=20",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"maybay",
+								"getByLoaiEndWith"
+							],
+							"query": [
+								{
+									"key": "s",
+									"value": "20"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByLoaiNotLike",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/maybay/getByLoaiNotLike?s=Air",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"maybay",
+								"getByLoaiNotLike"
+							],
+							"query": [
+								{
+									"key": "s",
+									"value": "Air"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByMaNV",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/maybay/getByMaNV?maNV=242518965",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"maybay",
+								"getByMaNV"
+							],
+							"query": [
+								{
+									"key": "maNV",
+									"value": "242518965"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetMaMBAndLoaiMBByLoai",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/maybay/getMaMBAndLoaiMBByLoai?loai=Airbus",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"maybay",
+								"getMaMBAndLoaiMBByLoai"
+							],
+							"query": [
+								{
+									"key": "loai",
+									"value": "Airbus"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetMaMBAndTamBayByLoai",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/maybay/getMaMBAndTamBayByLoai?loai=Airbus",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"maybay",
+								"getMaMBAndTamBayByLoai"
+							],
+							"query": [
+								{
+									"key": "loai",
+									"value": "Airbus"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ChuyenBayAPI",
+			"item": [
+				{
+					"name": "GetAllChuyenBay",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/chuyenbay",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"chuyenbay"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByGaDi",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/chuyenbay/getByGaDi?gaDi=DAD",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"chuyenbay",
+								"getByGaDi"
+							],
+							"query": [
+								{
+									"key": "gaDi",
+									"value": "DAD"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByGaDiContain",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/chuyenbay/getByGaDiContain?s=A",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"chuyenbay",
+								"getByGaDiContain"
+							],
+							"query": [
+								{
+									"key": "s",
+									"value": "A"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByGaDiAndGaDen",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/chuyenbay/getByGaDiAndGaDen?gaDi=SGN&gaDen=BMV",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"chuyenbay",
+								"getByGaDiAndGaDen"
+							],
+							"query": [
+								{
+									"key": "gaDi",
+									"value": "SGN"
+								},
+								{
+									"key": "gaDen",
+									"value": "BMV"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByDoDaiGreaterThan",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/chuyenbay/getByDoDaiGreaterThan?doDai=5000",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"chuyenbay",
+								"getByDoDaiGreaterThan"
+							],
+							"query": [
+								{
+									"key": "doDai",
+									"value": "5000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByDoDaiLessThan",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/chuyenbay/getByDoDaiLessThan?doDai=5000",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"chuyenbay",
+								"getByDoDaiLessThan"
+							],
+							"query": [
+								{
+									"key": "doDai",
+									"value": "5000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByDoDaiIs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/chuyenbay/getByDoDaiIs?doDai=4170",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"chuyenbay",
+								"getByDoDaiIs"
+							],
+							"query": [
+								{
+									"key": "doDai",
+									"value": "4170"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByLoaiGaDiSGNAndGaDenBMV",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/chuyenbay/getByLoaiGaDiSGNAndGaDenBMV",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"chuyenbay",
+								"getByLoaiGaDiSGNAndGaDenBMV"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByDoDaiLessThan10000AndGreaterThan8000",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/chuyenbay/getByDoDaiLessThan10000AndGreaterThan8000",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"chuyenbay",
+								"getByDoDaiLessThan10000AndGreaterThan8000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByAirbusA320",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/chuyenbay/getByAirbusA320",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"chuyenbay",
+								"getByAirbusA320"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByLoaiMayBay",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/chuyenbay/getByLoaiMayBay?loai=Airbus A319",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"chuyenbay",
+								"getByLoaiMayBay"
+							],
+							"query": [
+								{
+									"key": "loai",
+									"value": "Airbus A319"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByBoeing",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/chuyenbay/getByBoeing",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"chuyenbay",
+								"getByBoeing"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByDoDaiBetween",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/chuyenbay/getByDoDaiBetween?doDai1=10000&doDai2=8000",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"chuyenbay",
+								"getByDoDaiBetween"
+							],
+							"query": [
+								{
+									"key": "doDai1",
+									"value": "10000"
+								},
+								{
+									"key": "doDai2",
+									"value": "8000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByGioDiBefore12",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/chuyenbay/getByGioDiBefore12",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"chuyenbay",
+								"getByGioDiBefore12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCountChuyenBayByGadi",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/chuyenbay/getCountChuyenBayByGadi?gaDi=SGN",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"chuyenbay",
+								"getCountChuyenBayByGadi"
+							],
+							"query": [
+								{
+									"key": "gaDi",
+									"value": "SGN"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
