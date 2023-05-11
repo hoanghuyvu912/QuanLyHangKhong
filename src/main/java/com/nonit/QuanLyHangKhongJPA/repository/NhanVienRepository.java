@@ -11,7 +11,7 @@ import java.util.List;
 
 @Repository
 public interface NhanVienRepository extends JpaRepository<NhanVien, String> {
-    NhanVien getByTen(String ten);
+    List<NhanVien> getByTen(String ten);
 
     List<NhanVien> getByTenContain(String s);
 
@@ -36,5 +36,5 @@ public interface NhanVienRepository extends JpaRepository<NhanVien, String> {
     List<NhanVien> getByMaMB(@Param("maMB") Integer maMB);
 
     @Query(value = "SELECT new com.nonit.QuanLyHangKhongJPA.service.dto.NhanVienByNumOfPlanesDTO(nv.maNV, nv.ten, count(cn.mayBay.maMB)) from NhanVien nv join ChungNhan cn on nv.maNV = cn.nhanVien.maNV group by nv.maNV having count(cn.mayBay.maMB) > :number")
-    List<NhanVienByNumOfPlanesDTO> getByNumberOfPlanes(@Param("number") Integer number);
+    List<NhanVienByNumOfPlanesDTO> getByNumberOfPlanesGreaterThan(@Param("number") Integer number);
 }

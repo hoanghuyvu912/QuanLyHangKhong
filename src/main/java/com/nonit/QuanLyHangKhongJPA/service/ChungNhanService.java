@@ -3,11 +3,14 @@ package com.nonit.QuanLyHangKhongJPA.service;
 import com.nonit.QuanLyHangKhongJPA.entity.ChungNhan;
 import com.nonit.QuanLyHangKhongJPA.entity.MayBay;
 import com.nonit.QuanLyHangKhongJPA.entity.NhanVien;
+import com.nonit.QuanLyHangKhongJPA.exception.HangKhongException;
 import com.nonit.QuanLyHangKhongJPA.repository.ChungNhanRepository;
 import com.nonit.QuanLyHangKhongJPA.repository.ChuyenBayRepository;
 import com.nonit.QuanLyHangKhongJPA.repository.MayBayRepository;
 import com.nonit.QuanLyHangKhongJPA.repository.NhanVienRepository;
 import com.nonit.QuanLyHangKhongJPA.service.dto.ChungNhanDTO;
+import com.nonit.QuanLyHangKhongJPA.service.dto.ChungNhanRestDTO;
+import com.nonit.QuanLyHangKhongJPA.service.mapper.ChungNhanMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -21,22 +24,20 @@ public class ChungNhanService {
     private final NhanVienRepository nhanVienRepository;
     private final MayBayRepository mayBayRepository;
 
-    public List<ChungNhan> getAllChungNhan() {
-        return chungNhanRepository.findAll();
+    public List<ChungNhanRestDTO> getAllChungNhan() {
+        return ChungNhanMapper.INSTANCE.toRestDTOs(chungNhanRepository.findAll());
     }
 
-    public ChungNhan createChungNhan(ChungNhanDTO chungNhanDTO) {
-        Optional<NhanVien> nhanVien = nhanVienRepository.findById(chungNhanDTO.getMaNV());
-        Optional<MayBay> mayBay = mayBayRepository.findById(chungNhanDTO.getMaMB());
+    public ChungNhanRestDTO createChungNhan(ChungNhanDTO chungNhanDTO) {
+        NhanVien nhanVien = nhanVienRepository.findById(chungNhanDTO.getMaNV()).orElseThrow(HangKhongException::NhanVienNotFound);
+        MayBay mayBay = mayBayRepository.findById(chungNhanDTO.getMaMB()).orElseThrow(HangKhongException::MayBayNotFound);
 
         ChungNhan chungNhan = new ChungNhan();
 
-        if (nhanVien.isPresent()) {
-            chungNhan.setNhanVien(nhanVien.get());
-        }
-        if (mayBay.isPresent()) {
-            chungNhan.setMayBay(mayBay.get());
-        }
-        return chungNhanRepository.save(chungNhan);
+        chungNhan.setNhanVien(nhanVien);
+
+        chungNhan.setMayBay(mayBay);
+
+        return ChungNhanMapper.INSTANCE.toRestDTO(chungNhanRepository.save(chungNhan));
     }
 }
